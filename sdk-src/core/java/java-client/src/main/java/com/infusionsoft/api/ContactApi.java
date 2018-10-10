@@ -812,15 +812,14 @@ public class ContactApi {
         return call;
     }
     /**
-     * Build call for generalDataProtectionRegulationRedactUsingDELETE
+     * Build call for deleteContactUsingDELETE
      * @param contactId contactId (required)
-     * @param gdPRRedact  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call generalDataProtectionRegulationRedactUsingDELETECall(Long contactId, String gdPRRedact, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call deleteContactUsingDELETECall(Long contactId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -831,8 +830,6 @@ public class ContactApi {
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-        if (gdPRRedact != null)
-        localVarHeaderParams.put("GDPR-Redact", apiClient.parameterToString(gdPRRedact));
 
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
@@ -865,58 +862,50 @@ public class ContactApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call generalDataProtectionRegulationRedactUsingDELETEValidateBeforeCall(Long contactId, String gdPRRedact, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call deleteContactUsingDELETEValidateBeforeCall(Long contactId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'contactId' is set
         if (contactId == null) {
-            throw new ApiException("Missing the required parameter 'contactId' when calling generalDataProtectionRegulationRedactUsingDELETE(Async)");
-        }
-        
-        // verify the required parameter 'gdPRRedact' is set
-        if (gdPRRedact == null) {
-            throw new ApiException("Missing the required parameter 'gdPRRedact' when calling generalDataProtectionRegulationRedactUsingDELETE(Async)");
+            throw new ApiException("Missing the required parameter 'contactId' when calling deleteContactUsingDELETE(Async)");
         }
         
 
-        com.squareup.okhttp.Call call = generalDataProtectionRegulationRedactUsingDELETECall(contactId, gdPRRedact, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = deleteContactUsingDELETECall(contactId, progressListener, progressRequestListener);
         return call;
 
     }
 
     /**
-     * Delete a Contact with GDPR Redaction
-     * Deletes the specified contact.   If a request header named &#x60;GDPR-Redact&#x60; is included, the contact will instead be redacted according to [GDPR guidlines](https://gdpr-info.eu/). Redacting a contact will remove all personally identifiable information and cannot be undone.This method is private due to SpringFox documentation generation limitations.
+     * Delete a Contact
+     * Deletes the specified contact.   If a request header named &#x60;GDPR-Redact&#x60; is included, the contact will instead be redacted according to [GDPR guidlines](https://gdpr-info.eu/). Redacting a contact will remove all personally identifiable information and cannot be undone.
      * @param contactId contactId (required)
-     * @param gdPRRedact  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void generalDataProtectionRegulationRedactUsingDELETE(Long contactId, String gdPRRedact) throws ApiException {
-        generalDataProtectionRegulationRedactUsingDELETEWithHttpInfo(contactId, gdPRRedact);
+    public void deleteContactUsingDELETE(Long contactId) throws ApiException {
+        deleteContactUsingDELETEWithHttpInfo(contactId);
     }
 
     /**
-     * Delete a Contact with GDPR Redaction
-     * Deletes the specified contact.   If a request header named &#x60;GDPR-Redact&#x60; is included, the contact will instead be redacted according to [GDPR guidlines](https://gdpr-info.eu/). Redacting a contact will remove all personally identifiable information and cannot be undone.This method is private due to SpringFox documentation generation limitations.
+     * Delete a Contact
+     * Deletes the specified contact.   If a request header named &#x60;GDPR-Redact&#x60; is included, the contact will instead be redacted according to [GDPR guidlines](https://gdpr-info.eu/). Redacting a contact will remove all personally identifiable information and cannot be undone.
      * @param contactId contactId (required)
-     * @param gdPRRedact  (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> generalDataProtectionRegulationRedactUsingDELETEWithHttpInfo(Long contactId, String gdPRRedact) throws ApiException {
-        com.squareup.okhttp.Call call = generalDataProtectionRegulationRedactUsingDELETEValidateBeforeCall(contactId, gdPRRedact, null, null);
+    public ApiResponse<Void> deleteContactUsingDELETEWithHttpInfo(Long contactId) throws ApiException {
+        com.squareup.okhttp.Call call = deleteContactUsingDELETEValidateBeforeCall(contactId, null, null);
         return apiClient.execute(call);
     }
 
     /**
-     * Delete a Contact with GDPR Redaction (asynchronously)
-     * Deletes the specified contact.   If a request header named &#x60;GDPR-Redact&#x60; is included, the contact will instead be redacted according to [GDPR guidlines](https://gdpr-info.eu/). Redacting a contact will remove all personally identifiable information and cannot be undone.This method is private due to SpringFox documentation generation limitations.
+     * Delete a Contact (asynchronously)
+     * Deletes the specified contact.   If a request header named &#x60;GDPR-Redact&#x60; is included, the contact will instead be redacted according to [GDPR guidlines](https://gdpr-info.eu/). Redacting a contact will remove all personally identifiable information and cannot be undone.
      * @param contactId contactId (required)
-     * @param gdPRRedact  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call generalDataProtectionRegulationRedactUsingDELETEAsync(Long contactId, String gdPRRedact, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call deleteContactUsingDELETEAsync(Long contactId, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -937,7 +926,7 @@ public class ContactApi {
             };
         }
 
-        com.squareup.okhttp.Call call = generalDataProtectionRegulationRedactUsingDELETEValidateBeforeCall(contactId, gdPRRedact, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = deleteContactUsingDELETEValidateBeforeCall(contactId, progressListener, progressRequestListener);
         apiClient.executeAsync(call, callback);
         return call;
     }

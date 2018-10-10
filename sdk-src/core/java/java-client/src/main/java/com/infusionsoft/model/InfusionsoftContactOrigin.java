@@ -27,7 +27,7 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * InfusionsoftContactOrigin
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-10-04T18:28:33.684Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-10-10T00:36:44.670Z")
 public class InfusionsoftContactOrigin {
   @SerializedName("date")
   private OffsetDateTime date = null;

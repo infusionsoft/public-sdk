@@ -147,18 +147,17 @@ public class ContactApiTest {
     }
     
     /**
-     * Delete a Contact with GDPR Redaction
+     * Delete a Contact
      *
-     * Deletes the specified contact.   If a request header named &#x60;GDPR-Redact&#x60; is included, the contact will instead be redacted according to [GDPR guidlines](https://gdpr-info.eu/). Redacting a contact will remove all personally identifiable information and cannot be undone.This method is private due to SpringFox documentation generation limitations.
+     * Deletes the specified contact.   If a request header named &#x60;GDPR-Redact&#x60; is included, the contact will instead be redacted according to [GDPR guidlines](https://gdpr-info.eu/). Redacting a contact will remove all personally identifiable information and cannot be undone.
      *
      * @throws ApiException
      *          if the Api call fails
      */
     @Test
-    public void generalDataProtectionRegulationRedactUsingDELETETest() throws ApiException {
+    public void deleteContactUsingDELETETest() throws ApiException {
         Long contactId = null;
-        String gdPRRedact = null;
-        api.generalDataProtectionRegulationRedactUsingDELETE(contactId, gdPRRedact);
+        api.deleteContactUsingDELETE(contactId);
 
         // TODO: test validations
     }

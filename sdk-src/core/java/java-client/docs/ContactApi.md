@@ -1,6 +1,6 @@
 # ContactApi
 
-All URIs are relative to *https://hy526.infusionsoft.com/app*
+All URIs are relative to *https://api.infusionsoft.comapi.infusionsoft.com/crm/rest*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -10,7 +10,7 @@ Method | HTTP request | Description
 [**createCustomFieldUsingPOST**](ContactApi.md#createCustomFieldUsingPOST) | **POST** /contacts/model/customFields | Create a Custom Field
 [**createEmailForContactUsingPOST**](ContactApi.md#createEmailForContactUsingPOST) | **POST** /contacts/{contactId}/emails | Create an Email Record
 [**createOrUpdateContactUsingPUT**](ContactApi.md#createOrUpdateContactUsingPUT) | **PUT** /contacts | Create or Update a Contact
-[**generalDataProtectionRegulationRedactUsingDELETE**](ContactApi.md#generalDataProtectionRegulationRedactUsingDELETE) | **DELETE** /contacts/{contactId} | Delete a Contact with GDPR Redaction
+[**deleteContactUsingDELETE**](ContactApi.md#deleteContactUsingDELETE) | **DELETE** /contacts/{contactId} | Delete a Contact
 [**getContactUsingGET**](ContactApi.md#getContactUsingGET) | **GET** /contacts/{id} | Retrieve a Contact
 [**listAppliedTagsUsingGET**](ContactApi.md#listAppliedTagsUsingGET) | **GET** /contacts/{contactId}/tags | List Applied Tags
 [**listContactsUsingGET**](ContactApi.md#listContactsUsingGET) | **GET** /contacts | List Contacts
@@ -298,13 +298,13 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="generalDataProtectionRegulationRedactUsingDELETE"></a>
-# **generalDataProtectionRegulationRedactUsingDELETE**
-> generalDataProtectionRegulationRedactUsingDELETE(contactId, gdPRRedact)
+<a name="deleteContactUsingDELETE"></a>
+# **deleteContactUsingDELETE**
+> deleteContactUsingDELETE(contactId)
 
-Delete a Contact with GDPR Redaction
+Delete a Contact
 
-Deletes the specified contact.   If a request header named &#x60;GDPR-Redact&#x60; is included, the contact will instead be redacted according to [GDPR guidlines](https://gdpr-info.eu/). Redacting a contact will remove all personally identifiable information and cannot be undone.This method is private due to SpringFox documentation generation limitations.
+Deletes the specified contact.   If a request header named &#x60;GDPR-Redact&#x60; is included, the contact will instead be redacted according to [GDPR guidlines](https://gdpr-info.eu/). Redacting a contact will remove all personally identifiable information and cannot be undone.
 
 ### Example
 ```java
@@ -315,11 +315,10 @@ Deletes the specified contact.   If a request header named &#x60;GDPR-Redact&#x6
 
 ContactApi apiInstance = new ContactApi();
 Long contactId = 789L; // Long | contactId
-String gdPRRedact = "gdPRRedact_example"; // String | 
 try {
-    apiInstance.generalDataProtectionRegulationRedactUsingDELETE(contactId, gdPRRedact);
+    apiInstance.deleteContactUsingDELETE(contactId);
 } catch (ApiException e) {
-    System.err.println("Exception when calling ContactApi#generalDataProtectionRegulationRedactUsingDELETE");
+    System.err.println("Exception when calling ContactApi#deleteContactUsingDELETE");
     e.printStackTrace();
 }
 ```
@@ -329,7 +328,6 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **contactId** | **Long**| contactId |
- **gdPRRedact** | **String**|  |
 
 ### Return type
 

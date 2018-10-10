@@ -52,7 +52,7 @@ import com.infusionsoft.auth.OAuth;
 
 public class ApiClient {
 
-    private String basePath = "https://hy526.infusionsoft.com/app";
+    private String basePath = "https://api.infusionsoft.comapi.infusionsoft.com/crm/rest";
     private boolean debugging = false;
     private Map<String, String> defaultHeaderMap = new HashMap<String, String>();
     private String tempFolderPath = null;
@@ -106,7 +106,7 @@ public class ApiClient {
     /**
      * Set base path
      *
-     * @param basePath Base path of the URL (e.g https://hy526.infusionsoft.com/app
+     * @param basePath Base path of the URL (e.g https://api.infusionsoft.comapi.infusionsoft.com/crm/rest
      * @return An instance of OkHttpClient
      */
     public ApiClient setBasePath(String basePath) {

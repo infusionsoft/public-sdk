@@ -27,7 +27,7 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * InfusionsoftCreatePayment
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-10-04T18:28:33.684Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-10-10T00:36:44.670Z")
 public class InfusionsoftCreatePayment {
   @SerializedName("apply_to_commissions")
   private Boolean applyToCommissions = null;
@@ -57,7 +57,9 @@ public class InfusionsoftCreatePayment {
   public enum PaymentMethodTypeEnum {
     CREDIT_CARD("CREDIT_CARD"),
     
-    CASH("CASH");
+    CASH("CASH"),
+    
+    CHECK("CHECK");
 
     private String value;
 
@@ -160,10 +162,10 @@ public class InfusionsoftCreatePayment {
   }
 
    /**
-   * Get date
+   * Used when charge_now:false or inserting historical data. ex &#x60;2017-01-01T22:17:59.039Z&#x60;
    * @return date
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Used when charge_now:false or inserting historical data. ex `2017-01-01T22:17:59.039Z`")
   public OffsetDateTime getDate() {
     return date;
   }

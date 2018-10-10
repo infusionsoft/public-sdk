@@ -85,7 +85,7 @@ public class AccountInfoApiExample {
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://hy526.infusionsoft.com/app*
+All URIs are relative to *https://api.infusionsoft.comapi.infusionsoft.com/crm/rest*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
@@ -116,7 +116,7 @@ Class | Method | HTTP request | Description
 *ContactApi* | [**createCustomFieldUsingPOST**](docs/ContactApi.md#createCustomFieldUsingPOST) | **POST** /contacts/model/customFields | Create a Custom Field
 *ContactApi* | [**createEmailForContactUsingPOST**](docs/ContactApi.md#createEmailForContactUsingPOST) | **POST** /contacts/{contactId}/emails | Create an Email Record
 *ContactApi* | [**createOrUpdateContactUsingPUT**](docs/ContactApi.md#createOrUpdateContactUsingPUT) | **PUT** /contacts | Create or Update a Contact
-*ContactApi* | [**generalDataProtectionRegulationRedactUsingDELETE**](docs/ContactApi.md#generalDataProtectionRegulationRedactUsingDELETE) | **DELETE** /contacts/{contactId} | Delete a Contact with GDPR Redaction
+*ContactApi* | [**deleteContactUsingDELETE**](docs/ContactApi.md#deleteContactUsingDELETE) | **DELETE** /contacts/{contactId} | Delete a Contact
 *ContactApi* | [**getContactUsingGET**](docs/ContactApi.md#getContactUsingGET) | **GET** /contacts/{id} | Retrieve a Contact
 *ContactApi* | [**listAppliedTagsUsingGET**](docs/ContactApi.md#listAppliedTagsUsingGET) | **GET** /contacts/{contactId}/tags | List Applied Tags
 *ContactApi* | [**listContactsUsingGET**](docs/ContactApi.md#listContactsUsingGET) | **GET** /contacts | List Contacts
@@ -353,7 +353,7 @@ Authentication schemes defined for the API:
 
 - **Type**: OAuth
 - **Flow**: accessCode
-- **Authorization URL**: 
+- **Authorization URL**: https://accounts.infusionsoft.com/app/oauth/authorize
 - **Scopes**: N/A
 
 

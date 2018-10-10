@@ -1,6 +1,6 @@
 # SettingApi
 
-All URIs are relative to *https://hy526.infusionsoft.com/app*
+All URIs are relative to *https://api.infusionsoft.comapi.infusionsoft.com/crm/rest*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
