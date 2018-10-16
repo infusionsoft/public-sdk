@@ -32,7 +32,7 @@ import java.util.List;
 /**
  * InfusionsoftCompany
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-10-16T18:56:01.538Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-10-16T20:40:42.950Z")
 public class InfusionsoftCompany {
   @SerializedName("address")
   private InfusionsoftCompanyAddress address = null;
