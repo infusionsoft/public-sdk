@@ -29,7 +29,7 @@ import java.util.Map;
 /**
  * InfusionsoftCountriesByCode
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-10-16T20:40:42.950Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-10-16T20:44:31.010Z")
 public class InfusionsoftCountriesByCode {
   @SerializedName("countries")
   private Map<String, String> countries = new HashMap<String, String>();
