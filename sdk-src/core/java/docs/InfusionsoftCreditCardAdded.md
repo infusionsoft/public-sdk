@@ -4,7 +4,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**address** | [**InfusionsoftAddress**](InfusionsoftAddress.md) |  |  [optional]
+**address** | [**InfusionsoftContactAddress**](InfusionsoftContactAddress.md) |  |  [optional]
 **cardType** | **String** |  |  [optional]
 **contactId** | **Long** |  |  [optional]
 **emailAddress** | **String** |  |  [optional]

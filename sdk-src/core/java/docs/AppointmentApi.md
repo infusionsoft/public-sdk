@@ -1,9 +1,10 @@
 # AppointmentApi
 
-All URIs are relative to *https://api.infusionsoft.comapi.infusionsoft.com/crm/rest*
+All URIs are relative to *https://api.infusionsoft.com/crm/rest/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**createAppointmentCustomFieldUsingPOST**](AppointmentApi.md#createAppointmentCustomFieldUsingPOST) | **POST** /appointments/model/customFields | Create a Custom Field
 [**createAppointmentUsingPOST**](AppointmentApi.md#createAppointmentUsingPOST) | **POST** /appointments | Create an Appointment
 [**deleteAppointmentUsingDELETE**](AppointmentApi.md#deleteAppointmentUsingDELETE) | **DELETE** /appointments/{appointmentId} | Delete an Appointment
 [**getAppointmentUsingGET**](AppointmentApi.md#getAppointmentUsingGET) | **GET** /appointments/{appointmentId} | Retrieve an Appointment
@@ -12,6 +13,51 @@ Method | HTTP request | Description
 [**updateAppointmentUsingPUT**](AppointmentApi.md#updateAppointmentUsingPUT) | **PUT** /appointments/{appointmentId} | Replace an Appointment
 [**updatePropertiesOnAppointmentUsingPATCH**](AppointmentApi.md#updatePropertiesOnAppointmentUsingPATCH) | **PATCH** /appointments/{appointmentId} | Update an Appointment
 
+
+<a name="createAppointmentCustomFieldUsingPOST"></a>
+# **createAppointmentCustomFieldUsingPOST**
+> InfusionsoftCustomFieldMetaData createAppointmentCustomFieldUsingPOST(customField)
+
+Create a Custom Field
+
+Adds a custom field of the specified type and options to the Appointment object.
+
+### Example
+```java
+// Import classes:
+//import com.infusionsoft.ApiException;
+//import com.infusionsoft.api.AppointmentApi;
+
+
+AppointmentApi apiInstance = new AppointmentApi();
+InfusionsoftCreateRestCustomField customField = new InfusionsoftCreateRestCustomField(); // InfusionsoftCreateRestCustomField | customField
+try {
+    InfusionsoftCustomFieldMetaData result = apiInstance.createAppointmentCustomFieldUsingPOST(customField);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling AppointmentApi#createAppointmentCustomFieldUsingPOST");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **customField** | [**InfusionsoftCreateRestCustomField**](InfusionsoftCreateRestCustomField.md)| customField |
+
+### Return type
+
+[**InfusionsoftCustomFieldMetaData**](InfusionsoftCustomFieldMetaData.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 <a name="createAppointmentUsingPOST"></a>
 # **createAppointmentUsingPOST**

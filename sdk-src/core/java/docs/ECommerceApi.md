@@ -1,6 +1,6 @@
 # ECommerceApi
 
-All URIs are relative to *https://api.infusionsoft.comapi.infusionsoft.com/crm/rest*
+All URIs are relative to *https://api.infusionsoft.com/crm/rest/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -12,6 +12,7 @@ Method | HTTP request | Description
 [**getOrderUsingGET**](ECommerceApi.md#getOrderUsingGET) | **GET** /orders/{orderId} | Retrieve an Order
 [**getTransactionUsingGET**](ECommerceApi.md#getTransactionUsingGET) | **GET** /transactions/{transactionId} | Retrieve a Transaction
 [**listOrdersUsingGET**](ECommerceApi.md#listOrdersUsingGET) | **GET** /orders | List Orders
+[**listSubscriptionsUsingGET**](ECommerceApi.md#listSubscriptionsUsingGET) | **GET** /subscriptions | List Subscriptions
 [**listTransactionsForOrderUsingGET**](ECommerceApi.md#listTransactionsForOrderUsingGET) | **GET** /orders/{orderId}/transactions | Retrieve Order Transactions
 [**listTransactionsUsingGET**](ECommerceApi.md#listTransactionsUsingGET) | **GET** /transactions | List Transactions
 [**replacePaymentPlanUsingPUT**](ECommerceApi.md#replacePaymentPlanUsingPUT) | **PUT** /orders/{orderId}/paymentPlan | Replace an Order Pay Plan
@@ -387,6 +388,55 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**InfusionsoftOrderList**](InfusionsoftOrderList.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="listSubscriptionsUsingGET"></a>
+# **listSubscriptionsUsingGET**
+> InfusionsoftSubscriptionList listSubscriptionsUsingGET(limit, offset, contactId)
+
+List Subscriptions
+
+Retrieves a list of all subcriptions using the specified search criteria.
+
+### Example
+```java
+// Import classes:
+//import com.infusionsoft.ApiException;
+//import com.infusionsoft.api.ECommerceApi;
+
+
+ECommerceApi apiInstance = new ECommerceApi();
+Integer limit = 56; // Integer | Sets a total of items to return
+Integer offset = 56; // Integer | Sets a beginning range of items to return
+Long contactId = 789L; // Long | Returns subscriptions for the provided contact id
+try {
+    InfusionsoftSubscriptionList result = apiInstance.listSubscriptionsUsingGET(limit, offset, contactId);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ECommerceApi#listSubscriptionsUsingGET");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **limit** | **Integer**| Sets a total of items to return | [optional]
+ **offset** | **Integer**| Sets a beginning range of items to return | [optional]
+ **contactId** | **Long**| Returns subscriptions for the provided contact id | [optional]
+
+### Return type
+
+[**InfusionsoftSubscriptionList**](InfusionsoftSubscriptionList.md)
 
 ### Authorization
 

@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **creditCardId** | **Long** |  |  [optional]
 **date** | [**OffsetDateTime**](OffsetDateTime.md) | Used when charge_now:false or inserting historical data. ex &#x60;2017-01-01T22:17:59.039Z&#x60; |  [optional]
 **notes** | **String** |  |  [optional]
-**paymentAmount** | **Double** |  |  [optional]
+**paymentAmount** | **String** |  |  [optional]
 **paymentGatewayId** | **String** |  |  [optional]
 **paymentMethodType** | [**PaymentMethodTypeEnum**](#PaymentMethodTypeEnum) |  |  [optional]
 

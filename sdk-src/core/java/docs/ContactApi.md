@@ -1,6 +1,6 @@
 # ContactApi
 
-All URIs are relative to *https://api.infusionsoft.comapi.infusionsoft.com/crm/rest*
+All URIs are relative to *https://api.infusionsoft.com/crm/rest/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -440,7 +440,7 @@ No authorization required
 
 <a name="listContactsUsingGET"></a>
 # **listContactsUsingGET**
-> InfusionsoftContactList listContactsUsingGET(limit, offset, email, givenName, familyName, order, orderDirection)
+> InfusionsoftContactList listContactsUsingGET(limit, offset, email, givenName, familyName, order, orderDirection, since, until)
 
 List Contacts
 
@@ -461,8 +461,10 @@ String givenName = "givenName_example"; // String | Optional first name or foren
 String familyName = "familyName_example"; // String | Optional last name or surname to query on
 String order = "order_example"; // String | Attribute to order items by
 String orderDirection = "orderDirection_example"; // String | How to order the data i.e. ascending (A-Z) or descending (Z-A)
+String since = "since_example"; // String | Date to start searching from on LastUpdated ex. `2017-01-01T22:17:59.039Z`
+String until = "until_example"; // String | Date to search to on LastUpdated ex. `2017-01-01T22:17:59.039Z`
 try {
-    InfusionsoftContactList result = apiInstance.listContactsUsingGET(limit, offset, email, givenName, familyName, order, orderDirection);
+    InfusionsoftContactList result = apiInstance.listContactsUsingGET(limit, offset, email, givenName, familyName, order, orderDirection, since, until);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ContactApi#listContactsUsingGET");
@@ -481,6 +483,8 @@ Name | Type | Description  | Notes
  **familyName** | **String**| Optional last name or surname to query on | [optional]
  **order** | **String**| Attribute to order items by | [optional] [enum: id, date_created, name, email]
  **orderDirection** | **String**| How to order the data i.e. ascending (A-Z) or descending (Z-A) | [optional] [enum: ascending, descending]
+ **since** | **String**| Date to start searching from on LastUpdated ex. &#x60;2017-01-01T22:17:59.039Z&#x60; | [optional]
+ **until** | **String**| Date to search to on LastUpdated ex. &#x60;2017-01-01T22:17:59.039Z&#x60; | [optional]
 
 ### Return type
 
@@ -726,7 +730,7 @@ No authorization required
 
 <a name="updatePropertiesOnContactUsingPATCH1"></a>
 # **updatePropertiesOnContactUsingPATCH1**
-> InfusionsoftFullContact updatePropertiesOnContactUsingPATCH1(contactId, contact)
+> InfusionsoftFullContact updatePropertiesOnContactUsingPATCH1(contactId, contact, updateMask)
 
 Update a Contact
 
@@ -742,8 +746,9 @@ Updates a contact with only the values provided in the request.  You may opt-in 
 ContactApi apiInstance = new ContactApi();
 Long contactId = 789L; // Long | contactId
 InfusionsoftCreateOrPatchContact contact = new InfusionsoftCreateOrPatchContact(); // InfusionsoftCreateOrPatchContact | contact
+List<String> updateMask = Arrays.asList("updateMask_example"); // List<String> | An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped.
 try {
-    InfusionsoftFullContact result = apiInstance.updatePropertiesOnContactUsingPATCH1(contactId, contact);
+    InfusionsoftFullContact result = apiInstance.updatePropertiesOnContactUsingPATCH1(contactId, contact, updateMask);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ContactApi#updatePropertiesOnContactUsingPATCH1");
@@ -757,6 +762,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **contactId** | **Long**| contactId |
  **contact** | [**InfusionsoftCreateOrPatchContact**](InfusionsoftCreateOrPatchContact.md)| contact | [optional]
+ **updateMask** | [**List&lt;String&gt;**](String.md)| An optional list of properties to be updated. If set, only the provided properties will be updated and others will be skipped. | [optional]
 
 ### Return type
 

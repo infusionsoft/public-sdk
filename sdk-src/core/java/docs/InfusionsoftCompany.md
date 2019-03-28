@@ -21,22 +21,22 @@ Name | Type | Description | Notes
 ## Enum: EmailStatusEnum
 Name | Value
 ---- | -----
-UNENGAGED_MARKETABLE | &quot;Unengaged Marketable&quot;
-UNCONFIRMED | &quot;Unconfirmed&quot;
-CONFIRMED_LEGACY_ | &quot;Confirmed (Legacy)&quot;
+UNENGAGEDMARKETABLE | &quot;UnengagedMarketable&quot;
+SINGLEOPTIN | &quot;SingleOptIn&quot;
+DOUBLEOPTIN | &quot;DoubleOptin&quot;
 CONFIRMED | &quot;Confirmed&quot;
-UNENGAGED_NONMARKETABLE | &quot;Unengaged NonMarketable&quot;
-NON_MARKETABLE | &quot;Non-marketable&quot;
+UNENGAGEDNONMARKETABLE | &quot;UnengagedNonMarketable&quot;
+NONMARKETABLE | &quot;NonMarketable&quot;
 LOCKDOWN | &quot;Lockdown&quot;
-SOFT_BOUNCE | &quot;Soft Bounce&quot;
-HARD_BOUNCE | &quot;Hard Bounce&quot;
-OPT_OUT | &quot;Opt-Out&quot;
-OPT_OUT_ADMIN | &quot;Opt-Out: Admin&quot;
-OPT_OUT_SYSTEM | &quot;Opt-Out: System&quot;
-LIST_UNSUBSCRIBE | &quot;List Unsubscribe&quot;
-PROVIDED_FEEDBACK | &quot;Provided Feedback&quot;
-REPORTED_SPAM | &quot;Reported Spam&quot;
-INVALID_EMAIL | &quot;Invalid Email&quot;
+BOUNCE | &quot;Bounce&quot;
+HARDBOUNCE | &quot;HardBounce&quot;
+MANUAL | &quot;Manual&quot;
+ADMIN | &quot;Admin&quot;
+SYSTEM | &quot;System&quot;
+LISTUNSUBSCRIBE | &quot;ListUnsubscribe&quot;
+FEEDBACK | &quot;Feedback&quot;
+SPAM | &quot;Spam&quot;
+INVALID | &quot;Invalid&quot;
 
 
 

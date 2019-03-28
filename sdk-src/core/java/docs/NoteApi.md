@@ -1,16 +1,63 @@
 # NoteApi
 
-All URIs are relative to *https://api.infusionsoft.comapi.infusionsoft.com/crm/rest*
+All URIs are relative to *https://api.infusionsoft.com/crm/rest/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**createNoteCustomFieldUsingPOST**](NoteApi.md#createNoteCustomFieldUsingPOST) | **POST** /notes/model/customFields | Create a Custom Field
 [**createNoteUsingPOST**](NoteApi.md#createNoteUsingPOST) | **POST** /notes | Create a Note
 [**deleteNoteUsingDELETE**](NoteApi.md#deleteNoteUsingDELETE) | **DELETE** /notes/{noteId} | Delete a Note
 [**getNoteUsingGET**](NoteApi.md#getNoteUsingGET) | **GET** /notes/{noteId} | Retrieve a Note
 [**listNotesUsingGET**](NoteApi.md#listNotesUsingGET) | **GET** /notes | List Notes
+[**retrieveNoteModelUsingGET**](NoteApi.md#retrieveNoteModelUsingGET) | **GET** /notes/model | Retrieve Note Model
 [**updateNoteUsingPUT**](NoteApi.md#updateNoteUsingPUT) | **PUT** /notes/{noteId} | Replace a Note
 [**updatePropertiesOnNoteUsingPATCH**](NoteApi.md#updatePropertiesOnNoteUsingPATCH) | **PATCH** /notes/{noteId} | Update a Note
 
+
+<a name="createNoteCustomFieldUsingPOST"></a>
+# **createNoteCustomFieldUsingPOST**
+> InfusionsoftCustomFieldMetaData createNoteCustomFieldUsingPOST(customField)
+
+Create a Custom Field
+
+Adds a custom field of the specified type and options to the Note object.
+
+### Example
+```java
+// Import classes:
+//import com.infusionsoft.ApiException;
+//import com.infusionsoft.api.NoteApi;
+
+
+NoteApi apiInstance = new NoteApi();
+InfusionsoftCreateRestCustomField customField = new InfusionsoftCreateRestCustomField(); // InfusionsoftCreateRestCustomField | customField
+try {
+    InfusionsoftCustomFieldMetaData result = apiInstance.createNoteCustomFieldUsingPOST(customField);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling NoteApi#createNoteCustomFieldUsingPOST");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **customField** | [**InfusionsoftCreateRestCustomField**](InfusionsoftCreateRestCustomField.md)| customField |
+
+### Return type
+
+[**InfusionsoftCustomFieldMetaData**](InfusionsoftCustomFieldMetaData.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 <a name="createNoteUsingPOST"></a>
 # **createNoteUsingPOST**
@@ -187,6 +234,47 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**InfusionsoftNoteList**](InfusionsoftNoteList.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="retrieveNoteModelUsingGET"></a>
+# **retrieveNoteModelUsingGET**
+> InfusionsoftObjectModel retrieveNoteModelUsingGET()
+
+Retrieve Note Model
+
+Get the custom fields for the Note object
+
+### Example
+```java
+// Import classes:
+//import com.infusionsoft.ApiException;
+//import com.infusionsoft.api.NoteApi;
+
+
+NoteApi apiInstance = new NoteApi();
+try {
+    InfusionsoftObjectModel result = apiInstance.retrieveNoteModelUsingGET();
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling NoteApi#retrieveNoteModelUsingGET");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**InfusionsoftObjectModel**](InfusionsoftObjectModel.md)
 
 ### Authorization
 

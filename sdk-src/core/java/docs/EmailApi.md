@@ -1,6 +1,6 @@
 # EmailApi
 
-All URIs are relative to *https://api.infusionsoft.comapi.infusionsoft.com/crm/rest*
+All URIs are relative to *https://api.infusionsoft.com/crm/rest/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -240,7 +240,7 @@ No authorization required
 
 <a name="listEmailsUsingGET"></a>
 # **listEmailsUsingGET**
-> InfusionsoftEmailSentQueryResultList listEmailsUsingGET(limit, offset, contactId, email)
+> InfusionsoftEmailSentQueryResultList listEmailsUsingGET(limit, offset, contactId, email, sinceSentDate, untilSentDate)
 
 List Emails
 
@@ -258,8 +258,10 @@ Integer limit = 56; // Integer | Sets a total of items to return
 Integer offset = 56; // Integer | Sets a beginning range of items to return
 Long contactId = 789L; // Long | Optional Contact Id to find Emails for
 String email = "email_example"; // String | Optional email address to query on
+String sinceSentDate = "sinceSentDate_example"; // String | Optional date to query on, emails sent since the provided date, must be present if untilDate is provided
+String untilSentDate = "untilSentDate_example"; // String | Optional date to query on, email sent until the provided date
 try {
-    InfusionsoftEmailSentQueryResultList result = apiInstance.listEmailsUsingGET(limit, offset, contactId, email);
+    InfusionsoftEmailSentQueryResultList result = apiInstance.listEmailsUsingGET(limit, offset, contactId, email, sinceSentDate, untilSentDate);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling EmailApi#listEmailsUsingGET");
@@ -275,6 +277,8 @@ Name | Type | Description  | Notes
  **offset** | **Integer**| Sets a beginning range of items to return | [optional]
  **contactId** | **Long**| Optional Contact Id to find Emails for | [optional]
  **email** | **String**| Optional email address to query on | [optional]
+ **sinceSentDate** | **String**| Optional date to query on, emails sent since the provided date, must be present if untilDate is provided | [optional]
+ **untilSentDate** | **String**| Optional date to query on, email sent until the provided date | [optional]
 
 ### Return type
 

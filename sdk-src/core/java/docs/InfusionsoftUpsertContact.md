@@ -4,7 +4,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**addresses** | [**List&lt;InfusionsoftAddress&gt;**](InfusionsoftAddress.md) |  |  [optional]
+**addresses** | [**List&lt;InfusionsoftContactAddress&gt;**](InfusionsoftContactAddress.md) |  |  [optional]
 **anniversary** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
 **birthday** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
 **company** | [**InfusionsoftRequestCompanyReference**](InfusionsoftRequestCompanyReference.md) |  |  [optional]
@@ -18,7 +18,6 @@ Name | Type | Description | Notes
 **jobTitle** | **String** |  |  [optional]
 **leadSourceId** | **Long** |  |  [optional]
 **middleName** | **String** |  |  [optional]
-**notes** | **String** |  |  [optional]
 **optInReason** | **String** |  |  [optional]
 **origin** | [**InfusionsoftCreateContactOrigin**](InfusionsoftCreateContactOrigin.md) |  |  [optional]
 **ownerId** | **Long** |  |  [optional]

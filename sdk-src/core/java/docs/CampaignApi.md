@@ -1,11 +1,12 @@
 # CampaignApi
 
-All URIs are relative to *https://api.infusionsoft.comapi.infusionsoft.com/crm/rest*
+All URIs are relative to *https://api.infusionsoft.com/crm/rest/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**addContactToCampaignSequenceUsingPOST**](CampaignApi.md#addContactToCampaignSequenceUsingPOST) | **POST** /campaigns/{campaignId}/sequences/{sequenceId}/contacts/{contactId} | Add to Campaign Sequence
 [**addContactsToCampaignSequenceUsingPOST**](CampaignApi.md#addContactsToCampaignSequenceUsingPOST) | **POST** /campaigns/{campaignId}/sequences/{sequenceId}/contacts | Add Multiple to Campaign Sequence
+[**createAchieveApiGoalEventUsingPOST**](CampaignApi.md#createAchieveApiGoalEventUsingPOST) | **POST** /campaigns/goals/{integration}/{callName} | Achieve API Goal
 [**getCampaignUsingGET**](CampaignApi.md#getCampaignUsingGET) | **GET** /campaigns/{campaignId} | Retrieve a Campaign
 [**listCampaignsUsingGET**](CampaignApi.md#listCampaignsUsingGET) | **GET** /campaigns | List Campaigns
 [**removeContactFromCampaignSequenceUsingDELETE**](CampaignApi.md#removeContactFromCampaignSequenceUsingDELETE) | **DELETE** /campaigns/{campaignId}/sequences/{sequenceId}/contacts/{contactId} | Remove from Campaign Sequence
@@ -99,6 +100,55 @@ Name | Type | Description  | Notes
 ### Return type
 
 **Map&lt;String, String&gt;**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="createAchieveApiGoalEventUsingPOST"></a>
+# **createAchieveApiGoalEventUsingPOST**
+> List&lt;InfusionsoftGoalEventResultDTO&gt; createAchieveApiGoalEventUsingPOST(integration, callName, goalEvent)
+
+Achieve API Goal
+
+Achieves API goal for campaigns with matching integration, callName for a given contactId
+
+### Example
+```java
+// Import classes:
+//import com.infusionsoft.ApiException;
+//import com.infusionsoft.api.CampaignApi;
+
+
+CampaignApi apiInstance = new CampaignApi();
+String integration = "integration_example"; // String | integration
+String callName = "callName_example"; // String | callName
+InfusionsoftAchieveApiGoalEvent goalEvent = new InfusionsoftAchieveApiGoalEvent(); // InfusionsoftAchieveApiGoalEvent | goalEvent
+try {
+    List<InfusionsoftGoalEventResultDTO> result = apiInstance.createAchieveApiGoalEventUsingPOST(integration, callName, goalEvent);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling CampaignApi#createAchieveApiGoalEventUsingPOST");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **integration** | **String**| integration |
+ **callName** | **String**| callName |
+ **goalEvent** | [**InfusionsoftAchieveApiGoalEvent**](InfusionsoftAchieveApiGoalEvent.md)| goalEvent |
+
+### Return type
+
+[**List&lt;InfusionsoftGoalEventResultDTO&gt;**](InfusionsoftGoalEventResultDTO.md)
 
 ### Authorization
 
